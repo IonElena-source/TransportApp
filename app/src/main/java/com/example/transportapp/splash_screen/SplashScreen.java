@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.transportapp.R;
-import com.example.transportapp.views.Home;
+import com.example.transportapp.views.Authentification;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(MainActivity.this, Home.class);
+                Intent intent=new Intent(SplashScreen.this, Authentification.class);
                 startActivity(intent);
             }
-        }, 5000);
+        }, 3000);
     }
 }

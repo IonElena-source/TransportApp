@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TransportApp</string>
+    <string name="login">LOGIN</string>
+    <string name="textRegister">Don’t have an account? Register</string>
+    <string name="textHere">here</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="prompt_username">Username</string>
+    <string name="menuHome">Home</string>
+    <string name="menuSearch">Search</string>
+    <string name="menuProfile">Profile</string>
+    <string name="menuSettings">Settings</string>
 </resources>

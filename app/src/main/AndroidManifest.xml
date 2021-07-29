@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.transportapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".views.Home"></activity>
-        <activity android:name=".splash_screen.MainActivity">
+        <activity android:name=".views.MainActivity"></activity>
+        <activity android:name=".authentification.Register" />
+        <activity android:name=".authentification.Login" />
+        <activity android:name=".views.Authentification" />
+        <activity android:name=".splash_screen.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
