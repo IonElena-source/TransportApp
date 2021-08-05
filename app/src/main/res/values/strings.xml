@@ -12,4 +12,13 @@
     <string name="menuSearch">Search</string>
     <string name="menuProfile">Profile</string>
     <string name="menuSettings">Settings</string>
+    <string name="addExperience">Add</string>
+    <string name="prompt_starting_point">Starting Point</string>
+    <string name="prompt_destination_point">Destination Point</string>
+    <string name="prompt_departure_hour">Departure Hour</string>
+    <string name="prompt_hour">Hour</string>
+    <string name="prompt_minutes">Minutes</string>
+    <string name="tvDurationTrip">Duration Trip</string>
+    <string name="crowdness">Crowdedness level of the public transport</string>
+    <string name="prompt_satisfaction">Satisfaction</string>
 </resources>

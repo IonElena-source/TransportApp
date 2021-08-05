@@ -1,10 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/purple_200"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.FormExperience">
+    android:background="#E5DFD5"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:gravity="center"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#B3A795"
+            android:padding="10dp"
+            app:cardCornerRadius="5dp"
+
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_weight="5"
+                        android:src="@drawable/gps">
+
+                    </ImageView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/emailError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+
+
+                            android:hint="@string/prompt_starting_point"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingStart="5dp"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_weight="5"
+                        android:src="@drawable/gps">
+
+                    </ImageView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/destinationPointTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:id="@+id/destinationPoint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+
+
+                            android:hint="@string/prompt_destination_point"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingStart="5dp"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="67dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/delivery">
+
+                    </ImageView>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:entries="@array/transport_values"
+                        android:paddingLeft="5dp">
+
+                    </Spinner>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/clock">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/tvDepartureHour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:hint="@string/prompt_departure_hour"
+                        android:paddingLeft="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="10dp"
+
+                        android:gravity="center"
+                        android:hint="@string/prompt_hour"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="17dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvMinutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint="@string/prompt_minutes"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="17dp">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/duration"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="8dp"
+                        android:text="@string/tvDurationTrip"
+                        android:textSize="20dp"></TextView>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:hint="@string/prompt_hour"
+                        android:inputType="number"
+                        android:textColor="@color/white">
+
+                    </EditText>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="@string/prompt_minutes"
+                        android:inputType="number"
+                        android:textColor="@color/white">
+
+                    </EditText>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvCrowdness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/crowdness"
+                    android:textAlignment="center"
+                    android:textSize="19dp">
+
+                </TextView>
+
+                <SeekBar
+                    android:id="@+id/seekbarCrowdness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="10"
+                    android:min="1"
+                    android:minWidth="5dp">
+
+                </SeekBar>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/prompt_satisfaction"
+                    android:textAlignment="center"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <RatingBar
+                    android:layout_marginTop="5dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                </RatingBar>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="20dp"
+
+                    android:text="@string/addExperience"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-60dp"
+
+        android:src="@drawable/review" />
+
+</RelativeLayout>

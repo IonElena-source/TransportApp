@@ -28,6 +28,14 @@ public class HomeFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         firebaseAuth=FirebaseAuth.getInstance();
         firebaseFirestore=FirebaseFirestore.getInstance();
         String uidCurrentUser=firebaseAuth.getCurrentUser().getUid();
@@ -38,18 +46,11 @@ public class HomeFragment extends Fragment {
                 if(task.isSuccessful()){
                     DocumentSnapshot documentSnapshotUser=task.getResult();
                     String usernameCurrentUser="Welcome, "+documentSnapshotUser.get("Username")+"";
-                    TextView textViewCurrentUser=getActivity().findViewById(R.id.textViewUser);
+                    TextView textViewCurrentUser=rootView.findViewById(R.id.textViewUser);
                     textViewCurrentUser.setText(usernameCurrentUser);
                 }
             }
         });
-
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         Button buttonAddExperience=rootView.findViewById(R.id.buttonAddExperience);
                 buttonAddExperience.setOnClickListener(new View.OnClickListener() {
                     @Override
