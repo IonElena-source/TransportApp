@@ -66,7 +66,7 @@ public class Register extends AppCompatActivity {
                             userDocument.put("Username",username);
                             userDocument.put("Email",email);
                             userDocument.put("Password",password);
-                            userDocument.put("Experinces",user.getExperienceList());
+                            userDocument.put("Experiences",user.getExperienceList());
 
                             firestore.collection("users").document(firebaseAuth.getCurrentUser().getUid())
                                     .set(userDocument).addOnCompleteListener(new OnCompleteListener<Void>() {

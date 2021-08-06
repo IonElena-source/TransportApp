@@ -54,7 +54,7 @@
 
 
                         <EditText
-                            android:id="@+id/email"
+                            android:id="@+id/etStartingPoint"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -93,7 +93,7 @@
 
 
                         <EditText
-                            android:id="@+id/destinationPoint"
+                            android:id="@+id/etDestinationPoint"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -130,6 +130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
                         android:layout_weight="1"
+                        android:id="@+id/typeTransport"
                         android:entries="@array/transport_values"
                         android:paddingLeft="5dp">
 
@@ -218,6 +219,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/etDurationTripHour"
                         android:layout_marginLeft="20dp"
                         android:hint="@string/prompt_hour"
                         android:inputType="number"
@@ -230,6 +232,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:hint="@string/prompt_minutes"
+                        android:id="@+id/etDurationTripMinutes"
                         android:inputType="number"
                         android:textColor="@color/white">
 
@@ -271,7 +274,7 @@
 
                 <RatingBar
                     android:layout_marginTop="5dp"
-
+                    android:id="@+id/ratingSatisfaction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center">
